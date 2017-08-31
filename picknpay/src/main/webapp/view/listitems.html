@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   
+    <script src="./static/js/app.js"></script>
+    <script src="./static/js/alert.js"></script>
+    <link href="./static/css/app.css" rel="stylesheet">
+    <script src="./static/js/controller/app_controller.js"></script>
+    <script src="./static/js/service/http_service.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular-route.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+</head>
+<body ng-app="myApp">
+   
+    <div ng-controller="appctrl">  
+       
+		
+	
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">                  
+                
+                    <ul>
+                        <li data-ng-repeat="product in ProductList">{{product.productBrand}}{{product.productPrice}}</li>
+                    </ul>
+                
+                <div class="panel-primary" style="background-color:#999999;width:1500px;height:40px;margin-left:-200px;margin-bottom:26px;">
+                    
+                    
+                </div>
+                
+                
+                    <ul>
+                                                
+                        <div class="panel-danger" style="margin-bottom:126px; margin-top:16px;">
+                                                        
+                                <button data-ng-init="getProductInfomation()" class="btn btn-primary" style="width:140px;">View Products</button>                        
+                                <button data-ng-click=""  class="btn btn-warning">Update Products</button>
+                                <button data-ng-click=""  class="btn btn-danger">Delete Products</button>
+                        </div>
+                        
+                        <div class="table-responsive">
+                            <table  class="table table-hover" style="width:100%">
+                                <tr>
+                                  <th></th>
+                                  <th>Product Price</th> 
+                                  <th>Product Category</th>
+                                  <th>Product Brand</th>                                  
+                                  <th>Product Description</th>
+                                  <th>Product Image</th>
+                                </tr>
+                                <tr data-ng-repeat="product in ProductInfoList">
+                                  <td>{{product.productName}}</td>
+                                  <td>{{product.productBrand}}</td>
+                                  <td><label>R</label>{{product.productPrice}}</td>
+                                  <td>{{product.productCategory}}</td>                          
+                                  <td>{{product.productDescription}}</td>
+                                  <td><img src="./static/images/Dinner.jpgs" style="width:90px;height:100px;"></td>
+                                </tr>
+                                  
+
+                            </table>
+                        </div>
+                    </ul>
+                  
+                  
+            </div>
+            
+          
+        </div>
+    </div>
+        </div> 
+</body>
+</html>

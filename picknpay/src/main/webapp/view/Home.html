@@ -1,0 +1,1598 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-controller="appctrl">
+
+<head>
+<link rel="shortcut icon" href="./static/images/logo.ico" type="image/png">
+<link rel='icon' href='./static/images/logo.ico' type='image/x-icon'>
+<link rel="stylesheet" type="text/css" href="styles/custom.css"/>
+
+ <title>Pick n Pay Online&nbsp;</title>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular-route.js"></script>
+ <link href="./static/css/Home.css" rel="stylesheet">
+ <link href="./static/css/custom.css" rel="stylesheet">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">                                          
+
+
+</head>
+     
+<body>
+<div class="container" style="margin-left:190px;">
+	<div class="row">
+		<div class="col-lg-3">		     
+			 
+			          
+			<a href="#/AddToCart">
+			 <img src="./static/images/onlineshopping_logo.png" alt="onlineshopping_logo"/> 
+			</a>
+		</div>
+
+		<div class="form-group col-lg-4">
+
+			<div class="input-group" style="margin-top:80px;">
+
+				<input type="text" name="search_home" class="form-control" placeholder="Search by Keyword/Product/Brand" size="40" />
+				<div class="input-group-addon" >
+				<span class="glyphicon glyphicon-search"></span>
+				</div>
+			</div><!--input group closed-->
+		</div><!--form group closed-->
+
+		<div class="col-lg-5 pull-right">
+			<ul id="ul-home" style="margin-top:80px;color:#3C3C3C;">Hi! Please <a href="#/login" style="color:#B9094D;" data-toggle="tooltip" title="Log in">log in</a> or <a href="#/register" style="color:#B9094D;" data-toggle="tooltip" title="Register">register</a>
+				<div class="dropdown"><div class="bt" id="dropbtn">MY PNP<span class="glyphicon glyphicon-triangle-bottom" style="width:2px;"></span></div>
+					<div class="dropdown-content">
+					<a href="#/additems">My Lists</a>
+					<a href="#/AdminLogin">My Trolley</a>
+					<a href="#">Current Orders</a>
+					<a href="#">Previous Purchases</a>
+					<a href="#">Personal Details</a>
+					<a href="#">Delivery Details</a>
+					<a href="#/listitems">FAQs</a>
+					</div>
+				
+				</div><!--dropdown-->
+			</ul>
+		</div>
+	</div><!-- END ROW-->
+	   <div class="row">
+		<div class="topDrop">
+	
+		<ul class="nav nav-tabs" style="margin-top:-9px;margin-left:-15px;" id="list-home">
+			<li>
+			 <a class="homeNav" href="Home.html">
+			   
+			   <img src="./static/images/NAVhome.png" alt="Navhome Image" style="height:170px;width:50px;"/>		
+			 </a>
+			</li>		
+
+			<li>
+				 <a class="mainNav" href="Home.html">
+						   
+					<img src="./static/images/NAVpromotions.png" alt="Navpromotions Image" style="height:170px;width:50px;"/>		
+				</a>Promotions
+			</li>		
+
+
+			<li>
+				 <a class="mainNav" href="Home.html">
+						   
+					<img src="./static/images/NAVsmartshopper.png" alt="Navsmartshopper Image" style="height:170px;width:50px;"/>		
+				</a>SmartShopper
+			</li>	
+			
+			<li>
+			 <a class="mainNav" href="Home.html">
+			   
+			   <img src="./static/images/NAVrecipes.png" alt="Navrecipes Image" style="height:170px;width:50px;"/>		
+			 </a>Recipes
+			</li>		
+
+			<li>
+				 <a class="mainNav" href="Home.html">
+						   
+					<img src="./static/images/NAVstorelocator.png" alt="Navstorelocator Image" style="height:162px;width:40px;"/>		
+				</a>Store Locator
+			</li>		
+
+
+			<li>
+				 <a class="mainNav" href="Home.html">
+						   
+					<img src="./static/images/NAVcatalogues.png" alt="Navcatalogues Image" style="height:160px;width:64px;"/>		
+				</a>In-Store Catalogues
+			</li>	
+			
+			
+			
+			<li>
+			 <a class="mainNav" href="Home.html">
+			   
+			   <img src="./static/images/NAVvitality.png" alt="Navvitalityt Image" style="height:170px;width:50px;"/>		
+			 </a>Vitality
+			</li>		
+
+			<li>
+				 <a class="mainNav" href="Home.html">
+						   
+					<img src="./static/images/NAVcompetitions.png" alt="Navcompetitions Image" style="height:170px;width:50px;"/>		
+				</a>Competitions
+			</li>		
+
+
+			<li>
+				 <a class="mainNav" href="Home.html">
+						   
+					<img src="./static/images/NAVevents.png" alt="Navevents Image" style="height:170px;width:50px;"/>		
+				</a>Events
+			</li>	
+			
+			
+			<li>
+				 <a class="mainNav" href="Home.html">
+						   
+					<img src="./static/images/NAVclothing.png" alt="Navclothing Image" style="height:170px;width:50px;"/>		
+				</a>Clothing
+			</li>		
+
+
+			<li>
+				 <!-- <a class="mainNav" href="Home.html">
+						   
+					<img src="./static/images/NAVbirthday.png" alt="Navbirthday Image" style="height:170px;width:50px;"/>		
+				</a> -->Birthday
+			</li>	
+		 
+		</ul>
+	
+	
+	
+	
+	</div><!--End Row 2-->
+	  </div>
+	
+	
+</div><!-- container -->
+
+<div class="row">
+<div class="panel" style="margin-left:210px;margin-top:160px;">
+     
+	 <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1">
+                        <div id="droptext">GROCERIES</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--GROCERIES-->	  
+	  	  
+	  
+	  
+	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1">
+                        <div id="droptext">HOUSEHOLD CLEANING</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Air & Fabric Fresheners</div>
+							<div class="col-md-4" style="margin-top:6px;">
+							
+								 <li> <a  href="#">Aerosol</a> </li>
+								 <li> <a  href="#">Air Fresheners Candles</a> </li>
+								 <li> <a  href="#">Air Fresheners Other</a> </li>
+								 <li> <a  href="#">Diffusers</a> </li>	
+								 <li> <a  href="#">Fabric Fresheners</a> </li>
+								 <li> <a  href="#">Solod Air Fresheners</a> </li>
+								 <li> <a  href="#">Vehicle Air Fresheners</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Bleach</div>
+								 <li> <a  href="#">Perfumed</a> </li>
+								 <li> <a  href="#">Regular</a> </li>
+								 
+								 
+								 <div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Candles</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Ceremonial Candles</a> </li>
+									 <li> <a  href="#">Household Candles</a> </li>
+									 <li> <a  href="#">Basic Candles</a> </li>
+									 <li> <a  href="#">Ornamental Candles</a> </li>
+									
+								</div>
+								 								 
+							</div>							
+							
+							<!--ddd--><div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Candles</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Ceremonial Candles</a> </li>
+									 <li> <a  href="#">Household Candles</a> </li>
+									 <li> <a  href="#">Basic Candles</a> </li>
+									 <li> <a  href="#">Ornamental Candles</a> </li>
+									
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--HOUSEHOLD CLEANING-->	
+	  
+	    
+	  
+	  
+	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">BABY</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--BABY-->	
+	  
+	 	  
+	  
+	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">HEALTH & BEAUTY</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--HEALTH & BEAUTY-->	
+	  
+	  
+	  
+	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">HOME & GARDEN</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>	
+		
+		
+	  
+	  </div><!--HOME & GARDEN-->	
+	  
+	   
+	  
+	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">PET SHOP</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--HOPE PET-->	
+	  	  
+	  
+	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">SPORTS & LEISURE</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+					<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+					    <div class="col-md-4" style="margin-top:6px;">
+						<li> <a  href="#">Bread</a> </li>
+						<li> <a  href="#">Bread Rolls</a> </li>
+						<li> <a  href="#">Confectionery</a> </li>
+						<li> <a  href="#">Continental Bread</a> </li>	
+								
+					    <div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+						<li> <a  href="#">Carbonated Soft Drinks</a> </li>
+						<li> <a  href="#">Carbonated Fruit Juice</a> </li>
+						<li> <a  href="#">Concentrated Fruit Juice</a> </li>
+						<li> <a  href="#">Cordials & Squashes</a> </li>
+						<li> <a  href="#">Fruit Juice</a> </li>
+						<li> <a  href="#">lced Tea and Coffee</a> </li>
+						<li> <a  href="#">Long Life Fruit Juice</a> </li>
+						<li> <a  href="#">Milk Flavourants</a> </li>
+						<li> <a  href="#">Water</a> </li>
+						<li> <a  href="#">Powdered Drinks</a> </li>
+						<li> <a  href="#">Sports And Energy Drinks</a> </li>
+						<li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+                                            </div>
+							
+					    <div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+						<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+						    <li> <a  href="#">Prepacked Meats</a> </li>
+                                                    <li> <a  href="#">Deli Meats</a> </li>
+						    <li> <a  href="#">Ostritch</a> </li>
+                                                    <li> <a  href="#">Beef</a> </li>
+                                                    <li> <a  href="#">Lamb and Mutton</a> </li>
+						    <li> <a  href="#">Chicken</a> </li>
+						    <li> <a  href="#">Venison</a> </li>
+                                                    <li> <a  href="#">Biltong</a> </li>
+						    <li> <a  href="#">Pork</a> </li>	
+						</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--SPORTS & LEISURE-->	
+	  
+	     
+	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">TECHNOLOGY</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--TECHNOLOGY-->	
+	  
+	     
+	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">STATIONERY</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--HOUSEHOLD CLEANING-->	
+	  
+	  
+	  	   <div class="col-md-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">TOYS</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--STATIONERY-->	
+	
+	  
+	  
+	   <div class="col-sm-1">
+	  
+	    <ul class="list-inline" id="list-inline">
+		
+		    <div class="dropdown1"><div id="droptext">WINE & LIQUOR</div>
+			 
+		     	<div class="row">
+				    <div id="dropdown1-content" >		
+					
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:15px;margin-left:20px;">Bakery</div>
+							<div class="col-md-4" style="margin-top:6px;">
+								 <li> <a  href="#">Bread</a> </li>
+								 <li> <a  href="#">Bread Rolls</a> </li>
+								 <li> <a  href="#">Confectionery</a> </li>
+								 <li> <a  href="#">Continental Bread</a> </li>	
+								
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Beverages</div>
+								 <li> <a  href="#">Carbonated Soft Drinks</a> </li>
+								 <li> <a  href="#">Carbonated Fruit Juice</a> </li>
+								 <li> <a  href="#">Concentrated Fruit Juice</a> </li>
+								 <li> <a  href="#">Cordials & Squashes</a> </li>
+								 <li> <a  href="#">Fruit Juice</a> </li>
+								 <li> <a  href="#">lced Tea and Coffee</a> </li>
+								 <li> <a  href="#">Long Life Fruit Juice</a> </li>
+								 <li> <a  href="#">Milk Flavourants</a> </li>
+								 <li> <a  href="#">Water</a> </li>
+								 <li> <a  href="#">Powdered Drinks</a> </li>
+								 <li> <a  href="#">Sports And Energy Drinks</a> </li>
+								 <li> <a  href="#">Long Life UHT Milk</a> </li>
+								 
+							</div>
+							
+							<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Butchery</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+									 <li> <a  href="#">Prepacked Meats</a> </li>
+									 <li> <a  href="#">Deli Meats</a> </li>
+									 <li> <a  href="#">Ostritch</a> </li>
+									 <li> <a  href="#">Beef</a> </li>
+									 <li> <a  href="#">Lamb and Mutton</a> </li>
+									 <li> <a  href="#">Chicken</a> </li>
+									 <li> <a  href="#">Venison</a> </li>
+									 <li> <a  href="#">Biltong</a> </li>
+									 <li> <a  href="#">Pork</a> </li>	
+								</div>
+								
+								
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;margin-left:20px;">Dry Groceries</div>
+									<div class="col-md-4" style="margin-left:-50px;margin-top:6px;">
+										 <li> <a  href="#">Baking Aids</a> </li>
+										 <li> <a  href="#">Baking Ingredients</a> </li>
+										 <li> <a  href="#">Biscuits</a> </li>
+										 <li> <a  href="#">Breakfast Cereals</a> </li>	
+										 <li> <a  href="#">Canned Fish</a> </li>
+										 <li> <a  href="#">Canned Fruit</a> </li>
+										 <li> <a  href="#">Canned Meat</a> </li>
+										 <li> <a  href="#">Canned Vegetables</a> </li>
+										 <li> <a  href="#">Chips And Popcorn</a> </li>
+										 <li> <a  href="#">Chocolates</a> </li>
+										 <li> <a  href="#">Coffee Tea And Creamers</a> </li>
+										 <li> <a  href="#">Cooking Oil</a> </li>
+										 <li> <a  href="#">Dried Fruit & Nuts</a> </li>
+										 <li> <a  href="#">Dried Vegetables</a> </li>
+										 <li> <a  href="#">Jams & Sandwich Spreads</a> </li>
+										 <li> <a  href="#">Jelly Pudding & Custard</a> </li>
+										 <li> <a  href="#">Maize</a> </li>
+										 <li> <a  href="#">Pasta</a> </li>
+										 <li> <a  href="#">Pickles And Salads</a> </li>
+										 <li> <a  href="#">Rice & Couscous</a> </li>
+										 <li> <a  href="#">Salad Dressing Mayonnaise</a> </li>
+										 <li> <a  href="#">Sauces & Condiments</a> </li>
+										 <li> <a  href="#">Soups & Thickeners</a> </li>
+										 <li> <a  href="#">Spices & Seasoning</a> </li>
+										 <li> <a  href="#">Sugar & Sweeteners</a> </li>
+										 <li> <a  href="#">Sweets</a> </li>
+										 <li> <a  href="#">Vinegar</a> </li>
+										 <li> <a  href="#">Salad and Dips</a> </li>
+							        </div>
+									
+								<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:-20px;">Fresh Fish</div>
+								<div class="col-md-3" style="margin-left:-65px;margin-top:6px;">
+										 <li> <a  href="#">Chilled Fish</a> </li>
+										 
+										 
+										<div  style="font-family:cursive;font-size:16px;color:#B8094D;margin-top:25px;">Fresh Foods</div>
+										 <li> <a  href="#">Fresh Milk</a> </li>
+										 <li> <a  href="#">Assorted Meals</a> </li>
+										 <li> <a  href="#">Cheese Bar</a> </li>
+										 <li> <a  href="#">Dairy By Products</a> </li>
+										 <li> <a  href="#">Eggs</a> </li>
+										 <li> <a  href="#">Fresh Desserts</a> </li>
+										 <li> <a  href="#">Long Life UHT Milk</a> </li>
+										 <li> <a  href="#">Margarine-Fat=And-Butter</a> </li>
+										 <li> <a  href="#">Sauces</a> </li>
+										 <li> <a  href="#">Yeast</a> </li>
+										 <li> <a  href="#">Yogurt</a> </li>
+																				 
+								</div>
+								 
+					</div>
+					
+				</div>
+					
+								
+			</div>
+			
+		</ul>
+	  
+	  </div><!--TOYS-->	
+	    
+	   
+	   
+</div>
+
+</div><!--End Rows-->
+
+<div class="ContainerC" style="margin-left:210px;">
+
+	<div class="row">
+
+		<div class="col">
+		  <div id="first-slider">
+					<div id="corousel" class="carousel slide carousel-fade">
+					   <ol class="carousel-indicators">
+						   <li data-target="#carousel" data-slide-to="0" class="active"></li>
+						   <li data-target="#carouse1" data-slide-to="1"></li>
+						   <li data-target="#carouse1" data-slide-to="2"></li>
+						   <li data-target="#carousel" data-slide-to="3"></li>
+						   <li data-target="#carousel" data-slide-to="4"></li>
+						</ol>
+						
+							 <!-- Wrapper for slides -->
+				<div class="carousel-inner" role="listbox">
+					<!-- Item 1 -->
+					<div class="item active slide1">						
+						   
+						<img src="./static/images/Lamb-Deal-Banner.jpg"/>																		 
+														
+					</div>
+					
+				</div> 
+					 
+					<!-- Item 2 -->
+				<div class="item slide2">							
+						   
+					<div class="container"> <img src="./static/images/OLS-Banner-50th-welcome.jpg"/> </div>
+													
+				</div>
+					
+					<!-- Item 3 -->
+				<div class="item slide3">
+						
+				  <div class="container"> <img src="./static/images/Birthday_4_OLS_HP_Banner_01.jpg"/> </div>                      
+					
+				</div>
+					
+					<!-- Item 4 -->
+				<div class="item slide4">
+						
+					<div class="container">	<img src="./static/images/WK21-Online-Shop-Banner.jpg"> </div>
+										
+				</div>
+					<!-- End Item 4 -->
+					
+					<!-- Item 5 -->
+				<div class="item slide5">
+						
+					<div class="container">	<img  src="./static/images/Heaters_OLS_HP_Banner_01.jpg"> </div>										 
+						
+				</div>
+				<!-- End Item 5 -->				
+		
+			</div>
+						 
+			 </div>	
+            
+						<div class="row">	<div class="col-lg-4">
+
+							<a href="#"><img src="./static/images/Small-web-bnr-1.jpg" alt="Not Found"></a>
+							<a href="#"><img src="./static/images/Small-web-bnr-2.jpg" alt="Not Found"></a>
+							</div>
+							
+							<div class="col-lg-2" style="margin-top:0px;margin-left:-50px;">
+								 <a href="#"><img src="./static/images/Small-web-bnr-3.jpg" alt="Not Found"></a>
+								<a href="#"><img src="./static/images/Wine_Club_OLS_Small_Banner_01.jpg" alt="Not Found"></a>
+							 </div>
+						</div>	
+					
+					<div class="panel" style="background-color:#B8094D;width:65%;">
+					
+					  <div class="panel-body" style="font-size:15px;font-weight:bolder;color:white;">Prices for online orders only. Please <a href="" style="text-decoration:underline;color:white;">log in</a> to see prices and products specific to your region.</div>
+					
+					
+					</div>
+                    
+		</div><!--End Of Column-->
+                
+                
+                        
+                            <div class="col col-lg-4">  
+                              <div data-ng-init="getProductInfomation()">
+                                <div  data-ng-repeat="product in ProductInfoList" style="float:left;">
+                                            
+                                       <a href="" style="text-decoration: none;">
+                                           <div class="thumbnail" style="width:100px;height:100px;text-align:center;">
+                                                            {{product.productName}}
+                                            </div>
+                                          
+                                        </a>                                   
+                                          <label style="font-size:29px;color:#ED1C29;">                        
+                                              <div><sup>R</sup>{{product.productPrice}}</div>                                    
+                                           </label> 
+                                            
+                                </div>
+                            </div>
+                        </div>
+		
+	
+</div><!--End of Row in A container-->    
+  
+<footer style="margin-left:180px;">
+	<div class="jumbotron" style="height:550px;width:1200px;">
+	  <div class="col-lg-2" id="footer-links" style="margin-left:20px;">
+			<h4 style="color:#004579;">QUICKLINKS</h4>
+		<ul id="footer-list" style="list-style:none;margin-left:-40px;">
+			<li><a href="#">Find store & opening hours</a></li>
+			<li><a href="#">Online shopping</a></li>
+			<li><a href="#">Catalogues</a></li>
+			<li><a href="#">Smart Shopper</a></li>
+			<li><a href="#">Specials</a></li>
+			<li><a href="#">Online Security</a></li>
+		</ul>
+		<h5 style="font-weight:bolder;margin-top:42px;">NEW PNP MOBILE APP!<h5>
+		<a href=""><img src="./static/images/footmobile_ios.png" alt="Not Found"></a>
+		<a href=""><img src="./static/images/footmobile_play.png" alt="Not Found"></a>
+	  </div>
+	  
+	  <div class="col-lg-2">
+			<h4  style="color:#004579;">ABOUT PICK N PAY</h4>
+		<ul id="footer-list" style="list-style:none;margin-left:-40px;">
+			<li><a href="#">Company Profile</a></li>
+			<li><a href="#">Awards</a></li>
+			<li><a href="#">Press</a></li>
+			<li><a href="#">Investor Relations</a></li>
+			<li><a href="#">Careers</a></li>
+			
+		</ul>
+			<h5 style="margin-top:55px;font-weight:bolder;">OUR AWARDS</h5>
+		     <a href=""><img src="./static/images/footmobile_retailer.jpg"></a>
+	  </div>
+	  
+	  
+	   <div class="col-lg-3" id="footer-links">
+			<h4 style="color:#004579;">CORPORATE SOCIAL RESPONSIBILTY</h4>
+		<ul id="footer-list" style="list-style:none;margin-left:-40px;">
+			<li><a href="#">What Pick n Pay is doing</a></li>
+			<li><a href="#">What you can do</a></li>
+			<li><a href="#">Sustainability Reports</a></li>
+			<li><a href="#">Ackerman Pick n Pay Foundation</a></li>
+			<li><a href="#">Small Business Incubator</a></li>
+			<li><a href="#">Funding Guidelines</a></li>
+		</ul>
+	  </div>
+	  
+	  <div class="col-lg-2">
+			<h4 style="color:#004579;margin-left:0px;">OTHER SITES</h4>
+		<ul id="footer-list" style="list-style:none;margin-left:-40px;">
+			<li><a href="#">Pick n Pay Brand Match</a></li>
+			<li><a href="#">Pick n Pay Brand Mobi</a></li>
+			<li><a href="#">Pick n Pay Brand Mobile Money</a></li>
+			<li><a href="#">Online Shopping</a></li>
+			<li><a href="#">Pick n Pay Entertaining</a></li>
+			<li><a href="#">Pick n Pay Investor Relations</a></li>
+			<li><a href="#">Pick n Pay Travel</a></li>
+			<li><a href="#">Pick n Pay Tickets</a></li>
+			<li><a href="#">Boxer Superstores</a></li>
+			<li><a href="#">Goodness</a></li>
+			<li><a href="#">Pick n Pay School Club</a></li>
+			<li><a href="#">Pick n Pay Corporate</a></li>
+			
+		</ul>
+	  </div>
+	  
+	  
+	  <div class="col-lg-2">
+			<h4 style="color:#004579;">CONTACT US ONLINE</h4>
+		<a href=""><img src="./static/images/footblockEnquiries.png" alt="Image Not Found"></a>
+			<h5 style="margin-top:15px;">SHOP ENQUIRIES</h5>
+		<a href=""><img src="./static/images/footblockOnlineSupport.png" alt="Image Not Found"></a>
+	  </div>
+	  
+	</div>
+   <p style="margin-left:80px">
+   <a href=""  style="color:#A37A66">&nbsp;Privacy Policy&nbsp;</a>&nbsp;|&nbsp;
+   <a href=""  style="color:#A37A66">&nbsp;Terms and Conditions&nbsp;</a> | 
+   <a href=""  style="color:#A37A66">&nbsp;Sitemap&nbsp;</a>&nbsp;|&nbsp;
+   <a href=""  style="color:#A37A66">&nbsp;Copyright&nbsp;</a>&nbsp;|&nbsp;
+   <a href=""  style="color:#A37A66">&nbsp;Return Policy&nbsp;</a>&nbsp;|&nbsp;
+   <a href="" id="access-info" style="color:#A37A66">
+   <span class="dropdowns">&nbsp;Access to information&nbsp;</span>
+  <!-- <div class="dropdown-footer">
+   <a href="">Group</a>
+   <a href="">Retirement Scheme</a>
+   <a href="">Medical Scheme</a>
+   </div> -->
+   </a>&nbsp;|&nbsp;
+   <a href=""  style="color:#A37A66">
+   &nbsp;CPA&nbsp;</a>
+   </p>
+</footer>
+  
+ 
+  
+</div><!--End Of Container C-->
+
+
+<div class="image_con">
+
+
+
+</div>
+
+</body>
+
+
+</html>

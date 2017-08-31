@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   
+    <script src="./static/js/app.js"></script>
+    <script src="./static/js/controller/app_controller.js"></script>
+    <script src="./static/js/service/http_service.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body ng-app="myApp">
+   
+    <div ng-controller="appctrl"> 
+        
+	</div>   
+        <div class="col-lg-6">
+            
+                        <form>
+			
+		<p><label>SEARCH CATEGORY</label>
+                <input type="text" ng-model="searchCategory" align="center"></p>   
+                <table border="4">
+
+                    <thead>
+                        <tr width="40%">
+                            
+                                <th>Product Name</th>	
+                                <th>Brand name</th>	
+                                <th>Price</th>                                
+                                <th>Cart</th>
+                                                      
+                        </tr>
+                    </thead>
+                    <tbody data-ng-init ="getProductInfomation()">
+                        <tr class="info" data-ng-repeat="product in ProductInfoList | filter : searchCategory">
+                            <td>{{product.productName}}</td>
+                            <td>{{product.productBrand}}</td>
+                            <td>R{{product.productPrice}}</td>
+                           
+                           
+                            <!--<td><input type="submit" value="ADD TO CART" id="addCart" name="addCart"></td>-->
+                            <td>
+                                <button type = "button" ng-click="addcart(product)">
+                                    <span class = "glyphicon glyphicon-shopping-cart">
+                                     </span> Add to cart
+                                </button>
+                                <button type = "button" ng-click="addquantity(product)">
+                                    <span class = "glyphicon glyphicon-plus">
+                                     </span>
+                                </button>
+                                <button type = "button" ng-click="removequantity(product)">
+                                    <span class = "glyphicon glyphicon-minus">
+                                     </span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+	
+        </div>
+        
+          <div class = "pull-right col-md-5">
+            <div class = "panel panel-primary">
+                <div class = "panel-heading">
+                        <h5>MY CART</h5>
+                </div>
+                <div class = "panel-body table-responsive">
+                    <table class = "table">
+                        <thead>
+                            <tr width="40%">
+                                <th>Product Name</th>
+                                <th>Product Brand</th>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat = "cart in carts" ng-init = "setTotals(cart)">
+                                <td>{{cart.productName}}</td>
+                                <td>{{cart.productBrand}}</td>
+                                <td>R{{cart.productPrice}}</td>
+                                <td>{{cart.productQuantity}}</td>
+                                <td>
+                                    <button type = "button" ng-click = "removecart(cart)" class = "btn btn-danger">
+                                        <span class = "glyphicon glyphicon-remove">
+                                            
+                                        </span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align = "right">Total</td>
+                                <td>R{{total}}</td>
+                                <td>{{count}} items</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+        </div>
+</body>
+</html>
