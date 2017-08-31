@@ -28,7 +28,7 @@ angular.module('myApp').controller('appctrl',["$scope", "httpService","$location
 			$scope.logged=data.emailAddress;
 			console.log($scope.logged);			
 			$location.path('/Home');
-			////////$scope.getArticleDetails();
+			///////sss/$scope.getArticleDetails();
 			
 		};
 		
