@@ -2,7 +2,7 @@
 
 angular.module('myApp').controller('appctrl',["$scope", "httpService","$location","$window",function($scope,httpService,$location,$window){
 	
-	/*To Validate the User*/
+	/*To Validate the User ddddddddddddd*/
 	 $scope.validateuser=function(){
 		var email=$scope.emailAddress;
 		var pass=$scope.password;
